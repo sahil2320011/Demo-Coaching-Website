@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="slideshow-container">
+
+    <!-- Full-width slides/quotes -->
+    <div class="mySlides">
+      <div class="logoo" alt="logo"><img src="WhatsApp Image 2021-05-15 at 5.00.13 PM.jpeg"></div>
+      <q>I wanna first thank Sahil Sir, he is the best chemistry i ever had . His way of teaching is extraordinary. He focus more no concepts and self learning rather then scoring more marks in exam.I will never be able to forgot the concepts with he taught me. Last but not the least, i wanna thank Groww team for my success.</q>
+      <p class="author">- Safa Party (AIR-1 JEE-ADVANCE)</p>
+    </div>
+  
+    <div class="mySlides">
+      <div class="logoo" alt="logo"><img src="WhatsApp Image 2021-05-15 at 5.00.13 PM (1).jpeg"></div>
+      <q>You always need to give inputs to get an output(students who code know it quite well)......But seriously this is what makes Groww Education different from other jee preparation coachings in India since it is the place where your inputs are valued the most and you get the most of your inputs... Here your inputs are integrated by the maths faculties, balanced stoichiometrically by chemistry faculties....</q>
+      <p class="author">- Rishika Kotla   (AIR-1 MAINS)</p>
+    </div>
+  
+    <div class="mySlides">
+      <div class="logoo" alt="logo"><img src="WhatsApp Image 2021-05-15 at 4.58.51 PM.jpeg"></div>
+      <q >The atmosphere here is extremely motivating. The small batch strength helped me interact with my teachers and clear my doubts. The extra efforts put in by the faculty members to cover the syllabus in time helped me top in my school also.Also i was a dropper and the whole team motivated me always.They where always there when i need there help. I use to call Sahil Sir , at late hours to ask m my doubts .</q>
+      <p class="author">- Rahul Sauthwal (AIR-48 AIIMS)</p>
+    </div>
+  
+    <!-- Next/prev buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  
+  <!-- Dots/bullets/indicators -->
+  <div class="dot-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+  <script>
+    var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+  </script>
+</body>
+</html>
