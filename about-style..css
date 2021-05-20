@@ -44,14 +44,22 @@
     text-align: center;
     cursor: pointer;
     width: 100%;
-    margin-top:0.5rem;
     border-radius: 0 0 15px 15px;
     font-weight: 600;
     font-size: 1rem;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    margin:auto;
+    background-color:#ccffce; 
+    color: black; 
+    border: 2px solid #ccffce;
+
   }
   
   .button:hover {
-    background-color: #555;
+    background-color: #4CAF50;
+    border: 2px solid #4CAF50;
+    color: white;
   }
 
   .pic-art{
@@ -65,7 +73,7 @@
       width:50%;
       margin:auto;
       height:21rem;
-      background-color: turquoise;
+      background-color: rgb(153, 153, 151);
       margin-top:5rem;
       margin-bottom:5rem;
       padding: 2rem;
@@ -80,7 +88,7 @@
 }
   
   
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 800px) {
     .row {
         grid-template-columns: auto;
     }
